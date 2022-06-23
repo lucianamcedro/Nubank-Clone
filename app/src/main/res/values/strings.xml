@@ -3,4 +3,10 @@
     <string name="nome_usuario">Olá, Luciana</string>
     <string name="conta">Conta \n\n R$995,63</string>
     <string name="cartao">Meus Cartões</string>
+    <string name="text_promocao">\"Participe da promoção Tudo no Roxinho e concorra a....\"</string>
+    <string name="txt_cartao">Cartão de crédito</string>
+    <string name="txt_fatura">Fatura atual</string>
+    <string name="valor_cartao">R$: 257,95</string>
+    <string name="valor_limite">Limite disponível: R$: 5542,05</string>
+    <string name="parcela">Parcelar Compras</string>
 </resources>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -110,12 +116,13 @@
         app:layout_constraintTop_toBottomOf="@id/conta" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/light_gray"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycler_pagamentos">
@@ -136,8 +143,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="9dp"
                 android:text="@string/cartao"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -147,4 +154,89 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_gray"
+        android:focusable="false" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_produtos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+</androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/linha"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_gray"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_produtos"/>
+
+    <TextView
+        android:id="@+id/tex_cartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/txt_cartao"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linha" />
+
+    <TextView
+        android:id="@+id/tex_fatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_fatura"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex_cartao" />
+
+    <TextView
+        android:id="@+id/valor_cartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/valor_cartao"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex_fatura" />
+
+    <TextView
+        android:id="@+id/valor_limite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/valor_limite"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor_cartao" />
+
+    <TextView
+        android:id="@+id/txt_parcela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/parcela"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor_limite" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
