@@ -9,4 +9,11 @@
     <string name="valor_cartao">R$: 257,95</string>
     <string name="valor_limite">Limite disponível: R$: 5542,05</string>
     <string name="parcela">Parcelar Compras</string>
+    <string name="txt_emprestimo">Empréstimos</string>
+    <string name="valor_emprestimo">Até R$ 12.500 disponível para você</string>
+    <string name="txt_investimentos">Investimentos</string>
+    <string name="valor_investimentos">Conheça nossos fundos de investimentos</string>
+    <string name="txt_seguro">Seguro de vida</string>
+    <string name="valor_seguro">Um seguro completo e que cabe no bolso</string>
+    <string name="txt_descubra">Descubra mais</string>
 </resources>
